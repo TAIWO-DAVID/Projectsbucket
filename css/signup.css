@@ -1,0 +1,33 @@
+body {
+    background-color: teal;
+    margin: auto;
+    padding: 10px ;
+}
+
+div.form {
+    background-color: thistle;
+    display: block;
+    align-items: center;
+    text-align: center;
+    width: 40%;
+    padding: 2%;
+    margin: auto;
+    border-radius: 5px;
+}
+
+form {
+    display: inline-block;
+    text-align: left;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+input {
+    width: 90%;
+    margin: 1% 0% 1% 0%;
+}
+
+input.submit {
+    width: auto;
+    align-content: center;
+}

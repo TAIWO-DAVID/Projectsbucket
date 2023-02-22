@@ -1,0 +1,574 @@
+/**
+body {
+  background-color: black;
+  margin: auto;
+  padding-top: 10px;
+  width: 100%;
+}
+**/
+
+
+.col-1 {
+  width: 8.33%;
+}
+.col-2 {
+  width: 16.66%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.33%;
+}
+.col-5 {
+  width: 41.66%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.33%;
+}
+.col-8 {
+  width: 66.66%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.33%;
+}
+.col-11 {
+  width: 91.66%;
+}
+.col-12 {
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+[class*="col-"] {
+  float: left;
+}
+
+/*note:- hover doesn't work on touch devices*/
+div > div > button:hover {
+  filter: brightness(95%);
+}
+
+div.form-container {
+  padding-top: 0%;
+  margin: 0%;
+  background-color: thistle; /*white color is also very good here*/
+  display: block;
+  align-items: center;
+  width: 100%;
+  height: 70%;
+  border-radius: 5px;
+}
+
+.switchContainer {
+  margin-right: 30%;
+  margin-left: 30%;
+  align-items: center;
+  width: inherit;
+}
+
+.switch-option {
+  position: relative;
+  top: -10;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  width: 50%;
+}
+
+#signinSwitch {
+  left: -12%;
+  right: auto;
+}
+
+#signupSwitch {
+  left: 12%;
+  right: auto;
+}
+
+/*toggle button*/
+.switch {
+  position: relative;
+  display: inline;
+  width: inherit;
+  height: 34px;
+  margin: 0 13%;
+}
+
+.switch #checkboxSwitch {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 43px;
+
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+/*note:- hover doesn't work on touch devices*/
+.slider:hover {
+  filter: brightness(90%);
+}
+
+/*the slider*/
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 36px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background: -webkit-linear-gradient(left, #a445b2, #fa4299);*/
+  z-index: -1;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: rgba(247, 244, 244, 0.425);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(103.5%);
+}
+
+.slider.round {
+  background-color: rgba(247, 244, 244, 0.425);
+  padding-top: 12px;
+  border-radius: 5px;
+  width: 76%;
+  margin-left: -34%;
+  margin-top: auto;
+}
+
+.slider.round:before {
+  border-radius: 5px;
+  width: 47.5%;
+}
+
+.switch {
+  color: blueviolet;
+  display: inline;
+  margin: 0 16% 0 16%;
+  padding-top: 20%;
+  width: 100%;
+  z-index: 1;
+  font-weight: bolder;
+}
+
+/*form*/
+form {
+  width: 95%;
+  text-align: left;
+  padding: 0% 10%;
+  margin-top: 7%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.form .switch {
+  text-align: center;
+  display: inline-flex;
+  z-index: 1;
+}
+
+.form .switch .input {
+  z-index: 1;
+}
+
+.form .slide-controls {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  width: 75%;
+  margin: auto;
+  background: rgba(247, 244, 244, 0.425);
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+}
+
+.slide-controls .slide {
+  text-align: center;
+  z-index: 1;
+  color: #fff;
+}
+
+.slide-controls .slide-tab {
+  position: absolute;
+  left: 0;
+  z-index: 0;
+  border-radius: 5px;
+  background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+}
+
+#signup:checked ~ .slide-tab {
+  right: 50%;
+}
+
+.slide-controls .login {
+  text-align: center;
+  padding: 6px;
+  padding-right: 135px;
+}
+
+.slide-controls .signup {
+  text-align: center;
+
+  margin: auto;
+  padding: 6px;
+  padding-right: 70px;
+}
+
+input {
+  width: 100%;
+  height: 30px;
+  margin: 0%;
+  padding: 2%;
+  color: rgba(0, 0, 0, 0.863);
+  font-family: serif;
+  font-weight: 500;
+  font-size: larger;
+  border-color: white;
+  outline-style: none;
+  border-radius: 5px;
+  background-color: rgba(247, 244, 244, 0.425);
+}
+
+input::placeholder {
+  color: rgba(94, 75, 75, 0.979);
+  font-family: serif;
+  font-size: medium;
+  filter: contrast(50%);
+}
+
+input.submitBtn {
+  padding: 0;
+  margin-top: 1%;
+  align-content: center;
+  color: rgba(0, 0, 255, 0.856);
+
+  font-weight: 500;
+  background-color: violet;
+  cursor: pointer;
+  width: 75%;
+}
+
+input.submitBtn:link {
+  color: red;
+}
+
+input.submitBtn:visited {
+  background-color: yellowgreen;
+}
+
+input.submitBtn:focus {
+  background-color: brown;
+}
+
+/*note:- hover doesn't work on touch devices*/
+input.submitBtn:hover {
+  filter: brightness(90%);
+  /**background-color: rgb(131, 38, 92);**/
+  color: rgb(29, 29, 95);
+}
+
+input.submitBtn:active {
+  background-color: gray;
+}
+
+/*note:- hover doesn't work on touch devices*/
+/**
+input.submitBtn:visited {
+  color: rgba(0, 0, 255, 0.856);
+  background-color: yellow;
+}
+
+input.submitBtn:active {
+  background-color: violet;
+}
+**/
+
+/* error / success section*/
+/* div.success {
+  border-color: skyblue;
+}
+
+div.error {
+  color: red;
+  border-color: purple;
+} */
+
+
+
+.namings {
+  background: url(../icons/names/name-card.png);
+  background-color: rgba(247, 244, 244, 0.425);
+  padding-left: 40px;
+  background-size: 25px;
+  background-repeat: no-repeat;
+}
+
+.userIcon {
+  background: url(../icons/user/account.png);
+  background-color: rgba(247, 244, 244, 0.425);
+  padding-left: 40px;
+  background-size: 25px;
+  background-repeat: no-repeat;
+}
+
+.email {
+  background: url(../icons/email/icons8-mail-96.png);
+  background-color: rgba(247, 244, 244, 0.425);
+  padding-left: 40px;
+  background-size: 25px;
+  background-repeat: no-repeat;
+}
+
+.pwdIconOpen {
+  background: url(../icons/password/drawable-hdpi/pwd1.png);
+  background-color: rgba(247, 244, 244, 0.425);
+  padding-left: 40px;
+  background-size: 25px;
+  background-repeat: no-repeat;
+}
+
+.pwdIconClosed {
+  background-image: url(../icons/password/drawable-hdpi/pwd2.png);
+  background-color: rgba(247, 244, 244, 0.425);
+  padding-left: 40px;
+  background-size: 25px;
+  background-repeat: no-repeat;
+}
+
+.password {
+  background: url('../icons/password/icons8-secure-25.png');
+  background-color: rgba(247, 244, 244, 0.425);
+  padding-left: 40px;
+  background-size: 25px;
+  background-repeat: no-repeat;
+}
+
+.key_icon {
+  background: url('../icons/key/icons8-unlock-25.png');
+  color-interpolation-filters: sRGB;
+  /* background-color: rgba(247, 244, 244, 0.425); */
+  padding-left: 40px;
+  background-size: 25px;
+  background-repeat: no-repeat;
+}
+
+/*the paragragh after the form*/
+.loginOrSignup {
+  color: rgb(161, 7, 161);
+  text-align: center;
+  padding-top: 7%;
+  padding-bottom: 5%;
+  padding-right: ;
+  width: inherit;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* link to login & signup nested in paragraph after form */
+.linkToLoginOrSignup {
+  padding: 10px;
+  padding-right: 0px;
+  padding-left: 3px;
+  cursor: pointer;
+}
+
+/*forgotpwd  form container*/
+.forgotpwdForm {
+  margin-bottom: 15%;
+}
+
+/* container for forgot pwd submit btn */
+.submitForgotPwdEmailContainer {
+  margin-top: 5% !important;
+}
+
+form > div {
+  padding: 4px;
+}
+
+.success {
+  border-bottom: /*blueviolet*/ rgb(133, 11, 11) solid 2px;
+  color: #6e0b0bfc;
+  filter: brightness(60%);
+}
+.error {
+  border-bottom: #a90000 solid 2px;
+  filter: brightness(90%);
+  backdrop-filter: brightness(60%);
+  background-color: lemonchiffon;
+  color: #a90000;
+}
+/*the output message for error or success of the input*/
+.output-msg{
+  color: red;
+  font-size: 15px;
+  font-family: papyrus;
+}
+
+.resetPwdEmailMsg {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  color: brown;
+  border: 2px aliceblue solid;
+  border-radius: 7px;
+}
+
+.backToLogin {
+  color: rgb(65 173 65);
+  padding-bottom: 5%;
+  width: max-content;
+  padding-right: 20px;
+}
+
+.backToLogin:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.forgotpwd {
+  color: #ef2424;
+  margin-top: 5%;
+  margin-bottom: 0rem;
+}
+
+.forgotpwd:hover {
+  filter: brightness(0.5);
+}
+
+#forgotpassword {
+  padding-top: 5px;
+  padding-right: 25px;
+  padding-bottom: 10px;
+  text-decoration: underline;
+}
+
+#forgotpassword:visited {
+  color: green;
+  text-decoration: underline;
+}
+
+/*note:- hover doesn't work on touch devices*/
+#forgotpassword:hover {
+  text-decoration: none;
+  font-weight: normal;
+  filter: contrast(80%);
+}
+
+/* active status can be confirmed by pressing down the link*/
+#forgotpassword:active {
+  color: red;
+  text-decoration: overline;
+}
+
+/*  */
+.submition_error {
+  background-color: #c9c943;
+  border-radius: 7px;
+}
+
+/* the login and signup both use this link */
+.links {
+  color: rgb(85, 136, 7);
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.links:visited {
+  color: green;
+  text-decoration: underline;
+}
+
+/*note:- hover doesn't work on touch devices*/
+.links:hover {
+  text-decoration: none;
+  font-weight: normal;
+  filter: contrast(80%);
+}
+
+/* active status can be confirmed by pressing down the link*/
+.links:active {
+  color: red;
+  text-decoration: overline;
+}
+
+@media screen and (max-width: 500px) {
+  form > p:last-child {
+    display: inline-block;
+  }
+  form > p:last-child > a {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  /* .submition_error {
+    font-size: small;
+  } */
+  .forgotpwd {
+    text-decoration: underline;
+  }
+
+  input.submitBtn:link {
+    padding: 0;
+    margin-top: 1%;
+    align-content: center;
+    color: rgba(0, 0, 255, 0.856);
+    color: blue;
+    font-weight: 500;
+    background-color: violet;
+    cursor: pointer;
+  }
+
+  /*note:- hover doesn't work on touch devices*/
+
+  input.submitBtn:visited {
+    color: rgba(0, 0, 255, 0.856);
+    background-color: green;
+  }
+
+  input.submitBtn:focus {
+    /* background-color: yellow; */
+  }
+
+  input.submitBtn:hover {
+    color: rgba(0, 0, 255, 0.856);
+    background-color: violet; /*making the color remain thesame when
+    hover upon since it is not supported on touch devices*/
+  }
+
+  input.submitBtn:active {
+    background-color: violet;
+  }
+}
